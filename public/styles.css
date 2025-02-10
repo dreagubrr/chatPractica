@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    height: 100vh;
+    padding: 1rem;
+}
+
+#chat-container {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 1rem;
+    height: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#sidebar {
+    background: #fff;
+    border-right: 1px solid #e5e7eb;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-sidebar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.header-sidebar h3 {
+    color: #1a1a1a;
+    font-size: 1.2rem;
+}
+
+#userList {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    background: #f8fafc;
+    color: #1a1a1a;
+    font-size: 0.9rem;
+}
+
+#main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #fff;
+}
+
+#messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+#messages li {
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    max-width: 80%;
+    list-style: none;
+    margin: 0.2rem 0;
+    line-height: 1.4;
+    word-wrap: break-word;
+    position: relative;
+}
+
+#messages li.sent {
+    background: #0084ff;
+    color: white;
+    margin-left: auto;
+    border-bottom-right-radius: 0.2rem;
+}
+
+#messages li.received {
+    background: #e4e6eb;
+    color: #1a1a1a;
+    margin-right: auto;
+    border-bottom-left-radius: 0.2rem;
+}
+
+#form {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #fff;
+    border-top: 1px solid #e5e7eb;
+}
+
+#input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 1.5rem;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+#input:focus {
+    outline: none;
+    border-color: #0084ff;
+    box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.1);
+}
+
+#form button {
+    background: #0084ff;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#form button:hover {
+    background: #0073e6;
+}
+
+.logout-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
+
+/* Estilos para mensajes del sistema */
+.system-message {
+    text-align: center;
+    color: #6b7280;
+    font-style: italic;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* Estilos para la lista de usuarios */
+#onlineUsers {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.user-item {
+    padding: 0.8rem;
+    background: #f8fafc;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.user-item:hover {
+    background: #f1f5f9;
+}
+
+.user-item.selected {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#messages li {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
