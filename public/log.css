@@ -52,7 +52,7 @@ input:focus {
 }
 
 button {
-  background: #667eea;
+  background:#084681;
   color: white;
   padding: 0.8rem;
   border: none;
@@ -63,7 +63,7 @@ button {
 }
 
 button:hover {
-  background: #5a67d8;
+  background: #084681;
   transform: translateY(-1px);
 }
 
