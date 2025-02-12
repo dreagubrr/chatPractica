@@ -15,7 +15,7 @@ app.use(express.static('public'));
 
 // Redirigir a login al acceder a "/"
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/public/login.html');
+    res.redirect('/login.html');
 });
 
 // Conectar con MongoDB

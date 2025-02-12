@@ -127,7 +127,7 @@ body {
 }
 
 #form button {
-    background: #0084ff;
+    background: #084681;
     color: white;
     border: none;
     padding: 0 1.5rem;
@@ -138,7 +138,7 @@ body {
 }
 
 #form button:hover {
-    background: #0073e6;
+    background: #0c5ba5;
 }
 
 .logout-btn {
