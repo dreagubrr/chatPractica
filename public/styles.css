@@ -122,7 +122,7 @@ body {
 
 #input:focus {
     outline: none;
-    border-color: #0084ff;
+    border-color: #084681;
     box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.1);
 }
 
